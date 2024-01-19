@@ -21,7 +21,7 @@ const ChatList = ({ messages, isHidden }: ChatListProps) => {
         )
     }
     return (
-        <div className="flex flex-1 flex-col-reverse overflow-y-auto p-3 h-full">
+        <div className="flex flex-1 flex-col overflow-y-auto p-3 h-full">
             {messages.map((message) => (
                 <ChatMessage
                     key={message.timestamp}
@@ -34,7 +34,7 @@ const ChatList = ({ messages, isHidden }: ChatListProps) => {
 
 export const ChatListSkeleton = () => {
     return (
-        <div className="flex flex-1 flex-col space-y-4 h-full w-full items-start justify-end p-4">
+        <div className="flex flex-1 flex-col space-y-4 h-full w-full items-start justify-end p-4 hidden-scrollbar">
             <Skeleton className="h-6 w-1/2" />
             <Skeleton className="h-6 w-2/3" />
             <Skeleton className="h-6 w-1/2" />
